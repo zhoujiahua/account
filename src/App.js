@@ -30,12 +30,12 @@ class App extends Component {
     return (
       <div className="app">
         <header className="app-header">
-          <div class="alert alert-success alert-dismissible fade show firstCollapsible" role="alert">
+          <div className="alert alert-success alert-dismissible fade show firstCollapsible" role="alert">
             <h2>{this.state.title}</h2>
             <p>{this.state.desc}</p>
             <hr />
-            <div class="d-flex justify-content-end">
-              <button type="button" class="btn btn-outline-success" onClick={this.onClose} >F-BTN</button>
+            <div className="d-flex justify-content-end">
+              <button type="button" className="btn btn-outline-success" onClick={this.onClose} >F-BTN</button>
             </div>
           </div>
         </header>
