@@ -4,6 +4,7 @@ import './assets/style/App.scss';
 import './assets/style/Layout.scss';
 import './assets/style/Reset.scss';
 import AlertModal from './components/alert/AlertModal';
+import OutHtml from './components/html/OutHtml';
 class App extends Component {
   constructor(props) {
     super(props)
@@ -30,6 +31,7 @@ class App extends Component {
     return (
       <div className="app">
         <header className="app-header">
+          <AlertModal opt={this.state.list} onModal={this.onModal} />
           <div className="alert alert-success alert-dismissible fade show firstCollapsible" role="alert">
             <h2>{this.state.title}</h2>
             <p>{this.state.desc}</p>
@@ -40,9 +42,9 @@ class App extends Component {
           </div>
         </header>
         <main className="app-main">
-          <AlertModal opt={this.state.list} onModal={this.onModal} />
+          <OutHtml />
         </main>
-        <footer className="app-footer">footer</footer>
+        <footer className="app-footer"></footer>
       </div>
     )
   }
